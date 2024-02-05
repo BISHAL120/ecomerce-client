@@ -1,0 +1,171 @@
+.Product {
+  min-height: 90vh;
+}
+.product {
+  display: flex;
+  gap: 45px;
+}
+.product-img-div {
+  display: flex;
+  gap: 50px;
+}
+.other-img {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.other-img .oth-img {
+  width: 170px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: rgba(240, 238, 237, 1);
+}
+.oth-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.oth-img img {
+  width: 100%;
+  padding: 20px;
+}
+.main-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 550px;
+  height: 645px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: rgba(240, 238, 237, 1);
+}
+.main-img img {
+  width: 100%;
+}
+.product-detail-div {
+  text-align: start;
+}
+.price {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.curentPrice p {
+  color: #000;
+  font-size: 32px;
+  font-weight: 500;
+}
+.PreviousPrice p {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 32px;
+  font-weight: 500;
+}
+.discount p {
+  display: inline-flex;
+  padding: 6px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 62px;
+  background: rgba(255, 51, 51, 0.1);
+  color: #f33;
+  font-size: 16px;
+  font-weight: 500;
+}
+.description {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+}
+.size p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+}
+.choseSize {
+  display: flex;
+  gap: 20px;
+}
+.choseSize div {
+  border-radius: 40px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgba(240, 240, 240, 1);
+}
+.choseSize div p {
+  margin: 0;
+}
+.sizeActice {
+  background-color: #000 !important;
+}
+.sizeActice p {
+  color: white !important;
+}
+.Quantity-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 30px; */
+  margin-top: 30px;
+}
+.quantity {
+  width: 40%;
+  padding: 4px 20px;
+  border-radius: 62px;
+  background: #f0f0f0;
+}
+.quantity p {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.quantity div button {
+  border: none;
+  font-size: 27px;
+}
+/* .quantity div button:nth-child(1) {
+  font-size: 23px;
+} */
+.AddTocart {
+  width: 55%;
+}
+.AddTocart button {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 62px;
+  color: #fff;
+  background-color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+ {
+  /* <div className="other-img">
+                <div
+                  onClick={() => setMainimg(tsharts.img1)}
+                  className="oth-img"
+                >
+                  <img src={tsharts.img1} alt="images varient" />
+                </div>
+                <div
+                  onClick={() => setMainimg(tsharts.img2)}
+                  className="oth-img"
+                >
+                  <img src={tsharts.img2} alt="images varient" />
+                </div>
+                <div
+                  onClick={() => setMainimg(tsharts.img3)}
+                  className="oth-img"
+                >
+                  <img src={tsharts.img3} alt="images varient" />
+                </div>
+              </div>
+              <div className="main-img">
+                <img src={mainimg} alt="Main img" />
+              </div> */
+}
