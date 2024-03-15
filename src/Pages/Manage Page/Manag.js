@@ -6,20 +6,20 @@ const Manag = () => {
   const [tsharts, setTsharts] = useTsharts();
 
   const handleDelete = (id) => {
-    const confirm = window.confirm('are you sure. You want to delete ??');
-    if(confirm) {
-        const url = `http://localhost:5000/tsharts/${id}`
-        fetch(url, {
-            method: 'DELETE'
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            const remaining = tsharts.filter(tshart => tshart._id !== id);
-            setTsharts(remaining);
-        })
+    const confirm = window.confirm("are you sure. You want to delete ??");
+    if (confirm) {
+      const url = `https://ecomerve-app-server.vercel.app/tsharts/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          const remaining = tsharts.filter((tshart) => tshart._id !== id);
+          setTsharts(remaining);
+        });
     }
-  }
+  };
 
   return (
     <div>

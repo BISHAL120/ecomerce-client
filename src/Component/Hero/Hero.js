@@ -58,7 +58,7 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    const url = `http://localhost:5000/tsharts`;
+    const url = `https://ecomerve-app-server.vercel.app/tsharts`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setTshart(data));

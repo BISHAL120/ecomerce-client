@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
-import './TshartPage.css'
+import "./TshartPage.css";
 import { useState } from "react";
 import NewArraival from "../New Arraival/NewArraival";
 import { useLocation } from "react-router-dom";
 
-
 const TshartPage = () => {
-
   const { tshart } = useLocation();
 
   useEffect(() => {
@@ -17,11 +15,11 @@ const TshartPage = () => {
 
   const [Tsharts, setTsharts] = useState([]);
 
-  useEffect( () => {
-    fetch(`http://localhost:5000/tsharts`)
-    .then(res => res.json())
-    .then(data => setTsharts(data));
-  },[])
+  useEffect(() => {
+    fetch(`https://ecomerve-app-server.vercel.app/tsharts`)
+      .then((res) => res.json())
+      .then((data) => setTsharts(data));
+  }, []);
 
   const [curentPage, setCurentPage] = useState(1);
   const productPerPage = 9;
@@ -53,20 +51,20 @@ const TshartPage = () => {
         <div className="container-xxl">
           <div className="row">
             <h1 id="arraival" className="py-3">
-              <span style={{color:'#ffc107'}}>T</span>
-              <span style={{color: '#ffc107'}}>-</span>
-              <span style={{color:'#20c997'}}>S</span>
-              <span style={{color:'#75b798'}}>H</span>
-              <span style={{color: '#e0cffc'}}>I</span>
-              <span style={{color: '#c29ffa'}}>R</span>
-              <span style={{color: '#a370f7'}}>T</span>
+              <span style={{ color: "#ffc107" }}>T</span>
+              <span style={{ color: "#ffc107" }}>-</span>
+              <span style={{ color: "#20c997" }}>S</span>
+              <span style={{ color: "#75b798" }}>H</span>
+              <span style={{ color: "#e0cffc" }}>I</span>
+              <span style={{ color: "#c29ffa" }}>R</span>
+              <span style={{ color: "#a370f7" }}>T</span>
               <span> </span>
-              <span style={{color: '#8540f5'}}>&</span>
+              <span style={{ color: "#8540f5" }}>&</span>
               <span> </span>
-              <span style={{color: '#6610f2'}}>P</span>
-              <span style={{color: '#520dc2'}}>O</span>
-              <span style={{color: '#0d6efd'}}>L</span>
-              <span style={{color: '#0a58ca'}}>O</span>
+              <span style={{ color: "#6610f2" }}>P</span>
+              <span style={{ color: "#520dc2" }}>O</span>
+              <span style={{ color: "#0d6efd" }}>L</span>
+              <span style={{ color: "#0a58ca" }}>O</span>
               {/* <span style={{color: '#6ea8fe'}}>s</span> */}
             </h1>
             <div className="carts">

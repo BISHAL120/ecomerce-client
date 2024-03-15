@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import { json, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { AiOutlineMinus } from "react-icons/ai";
 import "./Product.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -11,12 +11,12 @@ const Product = () => {
   const [tsharts, setTsharts] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/tsharts/${id}`;
+    const url = `https://ecomerve-app-server.vercel.app/tsharts/${id}`;
 
     fetch(url)
       .then((res) => res.json())
       .then((data) => setTsharts(data));
-  }, []);
+  }, [id]);
 
   // const product = tsharts.find((tshart) => tshart.id === id);
   const [discount, setDiscount] = useState(20);

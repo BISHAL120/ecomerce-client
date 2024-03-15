@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    const url = `http://localhost:5000/tsharts`;
+    const url = `https://ecomerve-app-server.vercel.app/tsharts`;
     fetch(url, {
       method: "POST",
       headers: {
